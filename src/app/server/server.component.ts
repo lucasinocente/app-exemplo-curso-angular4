@@ -10,4 +10,6 @@ export class ServerComponent {
     serverID: number = 10;
     serverStatus: string = 'offline';
 
+    allowAddServer = true;
+
 }
