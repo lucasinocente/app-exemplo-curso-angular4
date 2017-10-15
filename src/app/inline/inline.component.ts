@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-inline',
+  selector: '[app-inline]',
   template: `
     <p>inline works!</p>
     And can call others components like <app-server></app-server>
