@@ -13,8 +13,11 @@ export class ServerComponent {
 
     allowCreateServer = true;
 
+    serverCreated = false;
+
     onCreateServer()  {
         this.serverStatus = 'online';
+        this.serverCreated = true;
     }
 
 }

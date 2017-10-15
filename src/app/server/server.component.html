@@ -1,13 +1,3 @@
-Server {{ serverID }} is {{ serverStatus }}
-
-
-<button 
-class="btn btn-primary"
-[disabled]="!allowCreateServer"
-(click)="onCreateServer()">Add Server</button>
-
-<hr>
-
 <label for="">Server Name:</label>
 <input 
     type="text"
@@ -15,3 +5,15 @@ class="btn btn-primary"
     [(ngModel)]="serverName">
 
     {{ serverName }}
+<br>
+<button 
+class="btn btn-primary"
+[disabled]="!allowCreateServer"
+(click)="onCreateServer()">Add Server</button>
+
+<hr>
+
+<p *ngIf="serverCreated; else noServer"> Server {{ serverName }} - {{ serverID }} is {{ serverStatus }} </p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
