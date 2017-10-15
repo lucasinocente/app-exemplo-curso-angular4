@@ -12,6 +12,6 @@ class="btn btn-primary"
 <input 
     type="text"
     class="form-control"
-    (input)="onUpdateServerName($event)">
+    [(ngModel)]="serverName">
 
     {{ serverName }}

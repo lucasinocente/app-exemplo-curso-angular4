@@ -17,8 +17,4 @@ export class ServerComponent {
         this.serverStatus = 'online';
     }
 
-    onUpdateServerName(event: Event) {
-        this.serverName = (<HTMLInputElement>event.target).value;
-    }
-
 }
