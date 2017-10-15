@@ -10,6 +10,10 @@ export class ServerComponent {
     serverID: number = 10;
     serverStatus: string = 'offline';
 
-    allowAddServer = true;
+    allowCreateServer = true;
+
+    onCreateServer()  {
+        this.serverStatus = 'online';
+    }
 
 }

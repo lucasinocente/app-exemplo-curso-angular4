@@ -3,4 +3,5 @@ Server {{ serverID }} is {{ serverStatus }}
 
 <button 
 class="btn btn-primary"
-[disabled]="!allowAddServer">Add Server</button>
+[disabled]="!allowCreateServer"
+(click)="onCreateServer()">Add Server</button>
