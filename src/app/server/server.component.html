@@ -13,7 +13,13 @@ class="btn btn-primary"
 
 <hr>
 
-<p *ngIf="serverCreated; else noServer" [ngStyle]="{backgroundColor: getColor()}"> Server {{ serverName }} - {{ serverID }} is {{ serverStatus }} </p>
+<p 
+    *ngIf="serverCreated; else noServer" 
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">
+        Server {{ serverName }} - {{ serverID }} is {{ serverStatus }}
+</p>
+
 <ng-template #noServer>
     <p>No server was created!</p>
 </ng-template>
