@@ -14,11 +14,6 @@ export class ServerComponent {
 
     serverID: number = 10;
     serverStatus: string = 'offline';
-    serverName = '';
-
-    allowCreateServer = true;
-
-    serverCreated = false;
 
     constructor() {
         this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -26,10 +21,6 @@ export class ServerComponent {
 
     getColor(){
         return this.serverStatus === 'online' ? 'green' : 'red';
-    }
-
-    onCreateServer()  {
-        this.serverCreated = true;
     }
 
 }
