@@ -15,8 +15,15 @@ export class ServerComponent {
 
     serverCreated = false;
 
+    constructor() {
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+
+    getColor(){
+        return this.serverStatus === 'online' ? 'green' : 'red';
+    }
+
     onCreateServer()  {
-        this.serverStatus = 'online';
         this.serverCreated = true;
     }
 
