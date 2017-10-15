@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { ServerComponent } from './server/server.component'
+import { ServerComponent } from './server/server.component';
+import { InlineComponent } from './inline/inline.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
+    InlineComponent
   ],
   imports: [
     BrowserModule
